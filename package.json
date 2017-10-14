@@ -1,0 +1,66 @@
+{
+  "name": "timezone-java",
+  "version": "1.0.0-0",
+  "description": "Converter between java.util.TimeZone strings and moment-timezone and vice versa",
+  "keywords": [
+    "converter",
+    "java.util.TimeZone",
+    "moment-timezone"
+  ],
+  "license": "Unlicense",
+  "author": "commenthol <commenthol@gmail.com>",
+  "main": "lib",
+  "module": "src",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "babel -d lib src",
+    "doc": "cat src/index.js | dox | doxme --readme > README.md",
+    "lint": "eslint '**/*.js'",
+    "prepublish": "npm run build && npm test",
+    "test": "mocha"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "never"
+      ]
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.8.0",
+    "mocha": "^4.0.1",
+    "moment-timezone": "^0.5.13",
+    "serialize-to-js": "^1.1.1"
+  },
+  "eslintIgnore": [
+    "lib"
+  ]
+}
