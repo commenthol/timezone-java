@@ -10,15 +10,17 @@
   "license": "Unlicense",
   "author": "commenthol <commenthol@gmail.com>",
   "main": "lib",
-  "module": "src",
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "all": "npm run clean && npm run build && npm test",
     "build": "babel -d lib src",
+    "clean": "rm -rf lib *.tgz",
     "doc": "cat src/index.js | dox | doxme --readme > README.md",
+    "extract": "cd scripts && sh ./extract.sh && node dl.js && node compare.js && npm run all",
     "lint": "eslint '**/*.js'",
-    "prepublish": "npm run build && npm test",
+    "prepublish": "npm run all",
     "test": "mocha"
   },
   "babel": {
@@ -51,16 +53,16 @@
       ]
     }
   },
+  "eslintIgnore": [
+    "lib"
+  ],
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.0",
-    "eslint": "^4.8.0",
-    "mocha": "^4.0.1",
-    "moment-timezone": "^0.5.13",
+    "eslint": "^5.3.0",
+    "mocha": "^5.2.0",
+    "moment-timezone": "^0.5.21",
     "serialize-to-js": "^1.1.1"
-  },
-  "eslintIgnore": [
-    "lib"
-  ]
+  }
 }

@@ -1,8 +1,8 @@
 /* eslint no-multi-spaces:0 */
 
 /**
-* missing timezones in moment-timezone
-*/
+ * missing timezones in moment-timezone
+ */
 const JAVA_2_TZ = {
   // source https://github.com/JodaOrg/joda-time/blob/master/src/main/java/org/joda/time/tz/src/systemv
   'SystemV/AST4': 'Etc/GMT-4',
@@ -47,8 +47,8 @@ const JAVA_2_TZ = {
 }
 
 /**
-* missing timezones in java
-*/
+ * missing timezones in java
+ */
 const TZ_2_JAVA = {
   // source https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   'America/Fort_Nelson': 'Etc/GMT-7',
@@ -68,23 +68,23 @@ const TZ_2_JAVA = {
 }
 
 /**
-* convert java.util.TimeZone id to moment-timezone
-* @param {string} timezone - java.util.TimeZone id
-* @example
-* const {toTimezone} = require('timezone-java')
-* toTimezone('AET') // > 'Etc/GMT+11'
-*/
+ * convert java.util.TimeZone id to moment-timezone
+ * @param {string} timezone - java.util.TimeZone id
+ * @example
+ * const {toTimezone} = require('timezone-java')
+ * toTimezone('AET') // > 'Etc/GMT+11'
+ */
 function toTimezone (timezone) {
   return JAVA_2_TZ[timezone] || timezone
 }
 
 /**
-* convert moment-timezone to java.util.TimeZone id
-* @param {string} timezone - moment-timezone
-* @example
-* const {toJava} = require('timezone-java')
-* toJava('Asia/Tomsk') // > 'Etc/GMT+7'
-*/
+ * convert moment-timezone to java.util.TimeZone id
+ * @param {string} timezone - moment-timezone
+ * @example
+ * const {toJava} = require('timezone-java')
+ * toJava('Asia/Tomsk') // > 'Etc/GMT+7'
+ */
 function toJava (timezone) {
   return TZ_2_JAVA[timezone] || timezone
 }

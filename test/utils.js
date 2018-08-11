@@ -1,7 +1,5 @@
 const fs = require('fs')
 const {resolve} = require('path')
-const {zones} = require('moment-timezone/data/unpacked/latest.json')
-// const zones = require('moment-timezone').tz.names()
 
 function javaTimezoneNames () {
   const filename = resolve(__dirname, 'javatimezones.txt')
@@ -12,8 +10,9 @@ function javaTimezoneNames () {
 }
 
 function momentZoneNames () {
-  const data = zones.map((zone) => zone.name)
-  return data
+  // const zones = require('moment-timezone').tz.names()
+  const zones = require('./latest.json')
+  return zones
 }
 
 module.exports = {

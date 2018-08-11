@@ -11,7 +11,7 @@ const momentTzs = momentZoneNames()
 describe('#java-timezones', function () {
   describe('shall convert moment-timezone to java timezone strings', function () {
     momentTzs.forEach((tz) => {
-      it(tz, function () {
+      it(String(tz), function () {
         const res = toJava(tz)
         assert.ok(javaTzs.indexOf(res) !== -1)
       })
