@@ -5,7 +5,7 @@ const https = require('https')
 const {parse} = require('url')
 
 const config = {
-  'https://raw.githubusercontent.com/moment/moment-timezone/develop/data/unpacked/latest.json':
+  'https://raw.githubusercontent.com/moment/moment-timezone/master/data/unpacked/latest.json':
   `${__dirname}/../test/latest.json`
 }
 
