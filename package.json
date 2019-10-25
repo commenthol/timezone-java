@@ -1,6 +1,6 @@
 {
   "name": "timezone-java",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Converter between java.util.TimeZone strings and moment-timezone and vice versa",
   "keywords": [
     "converter",
