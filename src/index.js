@@ -56,6 +56,7 @@ const TZ_2_JAVA = {
   'Asia/Atyrau': 'Etc/GMT+5',
   'Asia/Barnaul': 'Etc/GMT+7',
   'Asia/Famagusta': 'Etc/GMT+3',
+  'Asia/Qostanay': 'Etc/GMT+6',
   'Asia/Tomsk': 'Etc/GMT+7',
   'Asia/Yangon': 'Asia/Rangoon',
   'Europe/Astrakhan': 'Etc/GMT+4',

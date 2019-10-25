@@ -20,7 +20,7 @@ const download = (url, filename) => {
     res.on('end', () => {
       const latest = JSON.parse(body.toString())
       const data = latest.zones.map(zone => zone.name)
-      fs.writeFile(filename, JSON.stringify(data, null, 2), 'utf8')
+      fs.writeFileSync(filename, JSON.stringify(data, null, 2), 'utf8')
     })
   }).end()
 }

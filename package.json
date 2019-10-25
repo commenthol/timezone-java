@@ -7,10 +7,19 @@
     "java.util.TimeZone",
     "moment-timezone"
   ],
+  "homepage": "https://github.com/commenthol/timezone-java#readme",
+  "bugs": {
+    "url": "https://github.com/commenthol/timezone-java/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/commenthol/timezone-java.git"
+  },
   "license": "Unlicense",
   "author": "commenthol <commenthol@gmail.com>",
   "main": "lib",
   "directories": {
+    "lib": "lib",
     "test": "test"
   },
   "scripts": {
@@ -25,7 +34,7 @@
   },
   "babel": {
     "presets": [
-      "env"
+      "@babel/preset-env"
     ]
   },
   "eslintConfig": {
@@ -58,11 +67,12 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "eslint": "^5.3.0",
-    "mocha": "^5.2.0",
-    "moment-timezone": "^0.5.21",
-    "serialize-to-js": "^1.1.1"
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "eslint": "^6.5.1",
+    "mocha": "^6.2.2",
+    "moment-timezone": "^0.5.27",
+    "serialize-to-js": "^3.0.0"
   }
 }
