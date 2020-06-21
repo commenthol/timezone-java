@@ -67,12 +67,12 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@babel/cli": "^7.6.4",
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
-    "eslint": "^6.5.1",
-    "mocha": "^6.2.2",
-    "moment-timezone": "^0.5.27",
-    "serialize-to-js": "^3.0.0"
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "eslint": "^7.3.0",
+    "mocha": "^8.0.1",
+    "moment-timezone": "^0.5.31",
+    "serialize-to-js": "^3.1.1"
   }
 }

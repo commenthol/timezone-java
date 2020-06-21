@@ -51,18 +51,7 @@ const JAVA_2_TZ = {
  */
 const TZ_2_JAVA = {
   // source https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  'America/Fort_Nelson': 'Etc/GMT-7',
-  'America/Punta_Arenas': 'Etc/GMT-3',
-  'Asia/Atyrau': 'Etc/GMT+5',
-  'Asia/Barnaul': 'Etc/GMT+7',
-  'Asia/Famagusta': 'Etc/GMT+3',
-  'Asia/Qostanay': 'Etc/GMT+6',
-  'Asia/Tomsk': 'Etc/GMT+7',
-  'Asia/Yangon': 'Asia/Rangoon',
-  'Europe/Astrakhan': 'Etc/GMT+4',
-  'Europe/Kirov': 'Etc/GMT+3',
-  'Europe/Saratov': 'Etc/GMT+4',
-  'Europe/Ulyanovsk': 'Etc/GMT+4',
+  'America/Nuuk': 'America/Godthab',
   'GMT+0': 'Etc/GMT',
   'GMT-0': 'Etc/GMT',
   ROC: 'Asia/Taipei'
