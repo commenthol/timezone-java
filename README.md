@@ -6,7 +6,7 @@
 
 ## API
 
-### `toTimezone(timezone, [customerTzMap])`
+### `toTimezone(timezone, [customTzMap])`
 
 convert java.util.TimeZone to moment-timezone
 
@@ -15,7 +15,7 @@ convert java.util.TimeZone to moment-timezone
 | parameter         | type   | description           |
 | ----------------- | ------ | --------------------- |
 | `timezone`        | string | java.util.TimeZone id |
-| `[customerTzMap]` | object | custom timezone map   |
+| `[customTzMap]` | object | custom timezone map   |
 
 ### Example
 
@@ -28,7 +28,7 @@ const javaToMomentMap = { 'Etc/GMT+6': 'Asia/Tomsk' }
 toTimezone('Etc/GMT+6', javaTzMap) // > 'Asia/Tomsk'
 ```
 
-### `toJava(timezone, [customerTzMap])`
+### `toJava(timezone, [customTzMap])`
 
 convert moment-timezone to java.util.TimeZone id
 
@@ -37,7 +37,7 @@ convert moment-timezone to java.util.TimeZone id
 | parameter         | type   | description         |
 | ----------------- | ------ | ------------------- |
 | `timezone`        | string | moment-timezone     |
-| `[customerTzMap]` | object | custom timezone map |
+| `[customTzMap]` | object | custom timezone map |
 
 ### Example
 
