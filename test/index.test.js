@@ -27,4 +27,36 @@ describe('#java-timezones', function () {
       })
     })
   })
+
+  describe('custom overrides', function () {
+    const jsToJavaMap = { 'Asia/Tomsk': 'Etc/GMT+6' }
+
+    it('shall convert js timezone to java', () => {
+      assert.strictEqual(
+        toJava('Asia/Tomsk', jsToJavaMap),
+        'Etc/GMT+6'
+      )
+      assert.strictEqual(
+        toJava('ROC', jsToJavaMap),
+        'Asia/Taipei'
+      )
+    })
+
+    it('shall convert java timezone to js', () => {
+      const javaToJsMap = Object.entries(jsToJavaMap)
+        .reduce((o, [k, v]) => { 
+          o[v] = k 
+          return o
+        }, {})
+
+      assert.strictEqual(
+        toTimezone('Etc/GMT+6', javaToJsMap),
+        'Asia/Tomsk'
+      )
+      assert.strictEqual(
+        toTimezone('ACT', javaToJsMap),
+        'Australia/Darwin'
+      )
+    })
+  })
 })

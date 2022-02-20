@@ -1,41 +1,53 @@
+[![badge npm](https://img.shields.io/npm/v/timezone-java) ![badge downloads](https://img.shields.io/npm/dm/timezone-java)](https://www.npmjs.com/package/timezone-java)
+
 # timezone-java
 
 > Converter between [java.util.TimeZone][] strings and [moment-timezone][] and vice versa
 
 ## API
 
-### `toTimezone(timezone)`
+### `toTimezone(timezone, [customerTzMap])`
 
 convert java.util.TimeZone to moment-timezone
 
 ### Parameters
 
-| parameter  | type   | description             |
-| ---------- | ------ | ----------------------- |
-| `timezone` | string | java.util.TimeZone id   |
+| parameter         | type   | description           |
+| ----------------- | ------ | --------------------- |
+| `timezone`        | string | java.util.TimeZone id |
+| `[customerTzMap]` | object | custom timezone map   |
 
 ### Example
 
 ```js
 const {toTimezone} = require('timezone-java')
 toTimezone('AET') // > 'Australia/Sydney'
+
+// with custom map
+const javaToMomentMap = { 'Etc/GMT+6': 'Asia/Tomsk' }
+toTimezone('Etc/GMT+6', javaTzMap) // > 'Asia/Tomsk'
 ```
 
-### `toJava(timezone)`
+### `toJava(timezone, [customerTzMap])`
 
 convert moment-timezone to java.util.TimeZone id
 
 ### Parameters
 
-| parameter  | type   | description       |
-| ---------- | ------ | ----------------- |
-| `timezone` | string | moment-timezone   |
+| parameter         | type   | description         |
+| ----------------- | ------ | ------------------- |
+| `timezone`        | string | moment-timezone     |
+| `[customerTzMap]` | object | custom timezone map |
 
 ### Example
 
 ```js
 const {toJava} = require('timezone-java')
 toJava('Asia/Tomsk') // > 'Etc/GMT+7'
+
+// with custom map
+const momentToJavaMap = { 'Asia/Tomsk': 'Etc/GMT+6' }
+toJava('Asia/Tomsk', momentToJavaMap) // > 'Etc/GMT+6'
 ```
 
 ## Installation

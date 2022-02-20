@@ -173,6 +173,7 @@ America/Noronha
 America/North_Dakota/Beulah
 America/North_Dakota/Center
 America/North_Dakota/New_Salem
+America/Nuuk
 America/Ojinaga
 America/Panama
 America/Pangnirtung
@@ -535,6 +536,7 @@ Pacific/Guadalcanal
 Pacific/Guam
 Pacific/Honolulu
 Pacific/Johnston
+Pacific/Kanton
 Pacific/Kiritimati
 Pacific/Kosrae
 Pacific/Kwajalein
@@ -591,7 +593,6 @@ US/Indiana-Starke
 US/Michigan
 US/Mountain
 US/Pacific
-US/Pacific-New
 US/Samoa
 UTC
 Universal

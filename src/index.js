@@ -51,7 +51,6 @@ const JAVA_2_TZ = {
  */
 const TZ_2_JAVA = {
   // source https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  'America/Nuuk': 'America/Godthab',
   'GMT+0': 'Etc/GMT',
   'GMT-0': 'Etc/GMT',
   ROC: 'Asia/Taipei'
@@ -60,23 +59,25 @@ const TZ_2_JAVA = {
 /**
  * convert java.util.TimeZone id to moment-timezone
  * @param {string} timezone - java.util.TimeZone id
+ * @param {object} [customTzMap] custom timezone map
  * @example
  * const {toTimezone} = require('timezone-java')
  * toTimezone('AET') // > 'Etc/GMT+11'
  */
-function toTimezone (timezone) {
-  return JAVA_2_TZ[timezone] || timezone
+function toTimezone (timezone, customTzMap = {}) {
+  return customTzMap[timezone] || JAVA_2_TZ[timezone] || timezone
 }
 
 /**
  * convert moment-timezone to java.util.TimeZone id
- * @param {string} timezone - moment-timezone
+ * @param {string} timezone moment-timezone
+ * @param {object} [customTzMap] custom timezone map
  * @example
  * const {toJava} = require('timezone-java')
  * toJava('Asia/Tomsk') // > 'Etc/GMT+7'
  */
-function toJava (timezone) {
-  return TZ_2_JAVA[timezone] || timezone
+function toJava (timezone, customTzMap = {}) {
+  return customTzMap[timezone] || TZ_2_JAVA[timezone] || timezone
 }
 
 module.exports = {
